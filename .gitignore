@@ -1,0 +1,4 @@
+# Ignore IDE: Eclipse/ZendStudio
+/.settings/
+/.buildpath
+/.project

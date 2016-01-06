@@ -1,0 +1,17 @@
+{
+    "name": "lifeofguenter/validate-rapper",
+    "description": "A wrapper to some of PHP's filter_var validators but with IDN support.",
+    "keywords": ["validate", "validator", "validation", "valid", "domain", "url", "hostname", "email"],
+    "homepage": "https://github.com/lifeofguenter/validate_rapper",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gunter Grodotzki",
+            "email": "gunter@grodotzki.co.za",
+            "homepage": "http://www.lifeofguenter.de"
+        }
+    ],
+    "autoload": {
+        "files": ["src/validate.php"]
+    }
+}
