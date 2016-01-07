@@ -7,6 +7,10 @@ class ValidateUrlTest extends PHPUnit_Framework_TestCase {
         $this->assertTrue(function_exists('ValidateRapper\validate_url'));
     }
 
+    public function testInvalidUrl() {
+        $this->assertFalse(ValidateRapper\validate_url('http:/www.lifeofguenter.de'));
+    }
+
     public function testValidAsciiUrl() {
         $this->assertTrue(ValidateRapper\validate_url('http://www.lifeofguenter.de'));
     }

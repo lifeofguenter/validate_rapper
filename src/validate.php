@@ -55,7 +55,19 @@ namespace ValidateRapper {
 
             $parsed_url['host'] = idn_to_ascii($parsed_url['host']);
 
-            return (bool) filter_var(\http_build_url($parsed_url), FILTER_VALIDATE_URL, $options);
+            return (bool) filter_var(http_build_url($parsed_url), FILTER_VALIDATE_URL, $options);
+        }
+
+        function validate_email($variable, $options = null)
+        {
+            if (($pos = strrpos($variable, '@')) === false) {
+                return false;
+            }
+
+            $local_part  = substr($variable, 0, $pos);
+            $domain_part = substr($variable, $pos + 1);
+
+            return (bool) filter_var($local_part . '@' . idn_to_ascii($domain_part), FILTER_VALIDATE_EMAIL, $options);
         }
     }
 
